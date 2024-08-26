@@ -11,13 +11,8 @@ app = Flask(__name__)
 def home():
     return "Hello, Flask! Jisa"
 
-@app.route('/api/data')
-def get_data():
-    data = {"name": "Jisa", "age": 36}
-    return jsonify(data)
-
 # Load the dataset
-file_path = ("C:/Working folder- Jisa/data/cleaned_data.csv")
+#file_path = ("C:/Working folder- Jisa/data/cleaned_data.csv")
 df = pd.read_csv('https://dpapifiles.blob.core.windows.net/apifiles/cleaned_data.csv')
 
 # Summary of Churned Customers
